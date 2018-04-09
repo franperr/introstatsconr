@@ -8,7 +8,12 @@ Este es un documento [R Markdown](http://rmarkdown.rstudio.com). Te permite come
 A continuación vamos a escribir un poco de código en *R*. 
 
 ```{r}
-plot(cars)
+# Los comentarios vienen precedidos de una almohadilla. Nada de lo que escribo
+# aquí se ejecuta.
+
+numero <- 5 #La flecha asigna contenido a los objetos
+
+numero # Al invocar el objeto aparece el contenido del mismo
 ```
 
 Add a new chunk by clicking the *Insert Chunk* button on the toolbar or by pressing *Ctrl+Alt+I*.
