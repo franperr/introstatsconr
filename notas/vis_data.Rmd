@@ -1,0 +1,20 @@
+Visualización de datos
+-----------------
+
+
+
+Importación de datos: 
+
+```{r}
+empleados <- read_sav("data/EMPLEADOS.sav")
+
+head(empleados)
+```
+
+Vamos a sacar estadísticas descriptivas de cada una de las variables de nuestro set de datos
+
+```{r}
+summary(empleados)
+```
+
+
