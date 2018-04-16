@@ -1,13 +1,7 @@
----
-title: "Funciones básicas"
-output: 
-  html_notebook: 
-    toc: yes
-  html_document: 
-    toc: yes
+Funciones
 ---
 
-Listado de funciones básicas y funcionamiento
+Listado de funciones básicas y ejemplos
 
 **Unir objetos**
 
@@ -55,6 +49,23 @@ mtcars[1,3] # Aquí estoy seleccionando el valor que aparece en la primera fila,
             # tercera columna
 mtcars[1,] # Selecciono la primera fila entera
 mtcars[,8:11] # Selecciono las últimas cuatro columnas
+```
+
+**Importar sets de datos de ejemplos**
+
+```{r}
+# R cuenta con numerosos sets de datos por defecto. Para cargarlos en tu entorno de 
+# trabajo sólo tienes que utilizar la opción data()
+data("mtcars") # Aunque se trata de un set de datos, al no ser un objeto precargado 
+                # en el entorno de trabajo, deberá estar entrecomillado
+```
+
+** Seleccionar subset de datos en función de una condición**
+
+```{r}
+# Vamos a seleccionar un subset de datos que incluya únicamente con una cilindrada
+# mayor a 4
+cilindrada.alta <- subset(mtcars, cyl > 4)
 ```
 
 

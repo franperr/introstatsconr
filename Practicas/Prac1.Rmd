@@ -1,0 +1,26 @@
+
+Práctica 1
+-----------------
+
+En esta primera práctica vamos a trabajar con uno de los sets de datos que contiene _r_ por defecto. Se trata del set _Titanic_. El objetivo de esta práctica es familiarizar al estudiante con RStudio y comience a explorar datos en este lenguaje. Las tareas a seguir son las siguiente:
+
+1. ¿Cuál es el total de la población que hubo en el Titanic?
+2. 
+
+
+Instrucciones
+---------------
+Lo primero que deberás hacer es crear tu propio entorno de trabajo.
+
+1. Crea tu primer proyecto en RStudio
+2. Abre tu primer documento RMarkdown
+
+Ahora ya puedes comenzar a programar en R.
+
+Tu primer paso será importar los datos a tu entorno de trabajo. En este caso, trabajaremos con uno de los sets por defecto por lo que tendrás que importarlo de R directamente y cargarlo en tu entorno de trabajo
+
+```{r}
+plot(Titanic)
+```
+
+The preview shows you a rendered HTML copy of the contents of the editor. Consequently, unlike *Knit*, *Preview* does not run any R code chunks. Instead, the output of the chunk when it was last run in the editor is displayed.

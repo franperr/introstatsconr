@@ -1,6 +1,4 @@
----
-title: "Primeros pasos"
-output: html_notebook
+Primeros pasos
 ---
 
 Este es un documento [R Markdown](http://rmarkdown.rstudio.com). Te permite comentar tus análisis al mismo tiempo que escribes el código y ves los resultados.
@@ -16,13 +14,4 @@ numero <- 5 #La flecha asigna contenido a los objetos
 numero # Al invocar el objeto aparece el contenido del mismo
 ```
 
-Práctica 1
------------------
-
-En esta primera práctica vamos a trabajar con uno de los sets de datos que contiene _r_ por defecto. Se trata del set _Titanic_
-
-```{r}
-plot(Titanic)
-```
-
-The preview shows you a rendered HTML copy of the contents of the editor. Consequently, unlike *Knit*, *Preview* does not run any R code chunks. Instead, the output of the chunk when it was last run in the editor is displayed.
+Es recomendable escribir todo el código en un *script* o en un documento R markdown ya que no sólo te permitirá guardar todo tu código para poder volver a él en el futuro, sino que puedes ir ejecutándolo y haciendo comprobaciones conforme trabajas.
