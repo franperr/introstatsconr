@@ -45,7 +45,7 @@ sum(n)
     mtcars
 
 
-**4. Creando nuestro propio set de datos**. Vamos a crear dos vectores con las puntuaciones de clase de nuestros alumnos:
+**4. Creando nuestro propio set de datos**. Vamos a crear vectores con las puntuaciones de clase de nuestros alumnos:
 
 
 ```{r}
@@ -58,15 +58,16 @@ Maria <- c(4, 7, 5, 9, 6)
 - ¿Qué tipo de objecto es cada uno?
 - Une los distintos objetos en uno sólo y conviértelo en un data frame. Funciones a emplear: `cbind()` y `as.data.frame()`
 
-**6. Seleccionar casos dentro de un data frame**. Para seleccionar casos existen dos opciones, una de ellas es nombrar a las variables por su nombre o por su posición:
+**6. Seleccionar casos dentro de un data frame**. Para seleccionar casos existen dos opciones: 1) nombrar a las variables por su nombre o 2) nombrarlas por su posición:
 
 ```{r}
 # Para seleccionar una variable se puede llamar por su nombre
 mtcars$mpg # Al seleccionar así, lo que hago es extraer valores del data frame
-          # Por lo que cambia el tipo de objeto
+          # para la variable mpg
 
 # Si no conocemos el nombre pero sí la posición, utilizamos los corchetes
-# mtcars[fila, columna]
+# siguiendo esta estructura: dataframe[fila, columna]
+
 mtcars[1,3] # Aquí estoy seleccionando el valor que aparece en la primera fila,
             # tercera columna
 mtcars[1,] # Selecciono la primera fila entera
