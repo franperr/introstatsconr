@@ -60,7 +60,7 @@ data("mtcars") # Aunque se trata de un set de datos, al no ser un objeto precarg
                 # en el entorno de trabajo, deberá estar entrecomillado
 ```
 
-** Seleccionar subset de datos en función de una condición**
+**Seleccionar subset de datos en función de una condición**
 
 ```{r}
 # Vamos a seleccionar un subset de datos que incluya únicamente con una cilindrada
