@@ -18,3 +18,61 @@ summary(empleados)
 ```
 
 
+Graphics
+--------------
+
+Ahora vamos a hacer un gráfico de dispersión para analizar la relación entre la experiencia previa y el salario inicial
+
+```{r}
+plot(empleados$expprev, empleados$salini)
+```
+
+Los histogramas son representaciones gráficas muy útiles para analizar distribuciones. En este caso veremos cómo se distribuye el salario actual según el número de empleados:
+
+```{r}
+hist(empleados$salario)
+```
+
+Otra forma de representar distribuciones es empleando gráficos de caja y bigotes.
+
+```{r}
+boxplot(id~catlab, data = empleados)
+```
+
+
+ggplot2
+--------------
+
+Lo primero que hay que hacer es instalar el paquete `ggplot2`.
+
+Ahora vamos a hacer nuestro primer gráfico de dispersión:
+
+```{r}
+library(ggplot2)
+
+# Error por el tipo de clase que es cada variable, hay que convertirlas
+#ggplot(empleados) +
+#  geom_point(aes(x= expprev, y= salini)) 
+
+empleados2 <- empleados
+empleados2$expprev <- as.numeric(empleados2$expprev)  
+empleados2$salini <- as.numeric(empleados2$salini)
+
+ggplot(empleados2) +
+  geom_point(aes(x= expprev, y= salini)) 
+
+```
+
+Podemos seguir añadiendo capas y variables para mostrar más información en la gráfica
+
+```{r}
+empleados2$catlab <- as.factor(empleados2$catlab)
+empleados2$sexo <- as.factor(empleados2$sexo)
+
+ggplot(empleados2) +
+  geom_point(aes(x=expprev, y=salini, color=sexo, size=catlab))
+
+```
+
+
+
