@@ -1,102 +1,28 @@
-Resolución práctica 2
---------------
+
+Prácticas 3
+-----------------
+
+En esta práctica utilizaremos el set de datos `Europa.sav`. El objetivo es
 
 **1. Importa el set de datos empleados en R**. ¿En qué formato están los datos? ¿Qué paquete de R es necesario para importarlos?
 
 **2. Descriptiva del set de datos**. 
   
   - Calcula los indicadores básicos de cada variable (mediana, media, primer cuartil...)
-  
-```{r}
-summary(empleados2)
-```
 
 **3. Vamos a centrarnos en la distribución de salarios por categoría profesional**. La categoría profesional viene definida por la variable `catlab`. Aquellos con categoría 1 son los técnicos. Queremos ver el sueldo promedio y la desviación estándar del mismo por categoría profesional. **Nota:** Tendrás que utilizar la función `aggregate()`.
 
-```{r}
-aggregate(empleados2$salario, list(empleados2$catlab), FUN= mean)
-```
-  - Modela si el salario de los trabajadores técnicos sigue una distribución normal.
-  
-```{r}
-tecnicos <- subset(empleados2, catlab==1)
-ggplot(tecnicos) +
-  geom_histogram(aes(x= salario, y = ..density.., fill= ..count..)) +
-  stat_function(fun=dnorm, color="firebrick",
-                args = list(mean= mean(tecnicos$salario),
-                            sd = sd(tecnicos$salario)))
-```
-
-
-Comparativa de cuantiles teóricos y reales
-
-```{r}
-qqnorm(tecnicos$salario, pch = 19, col = "gray50")
-qqline(tecnicos$salario)
-```
-
-Test de Shapiro-Wilk:
-
-```{r}
-shapiro.test(x = tecnicos$salario)
-```
+  - Modela si el salario de los trabajadores técnicos sigue una distribución normal. Para ello, lo primero que deberás hacer es un histograma para ver cómo se distribuye esta variable. En segundo lugar, deberás aplicar el test de Shapiro-Wilk.
 
 **4. Contraste de hipótesis**. El objetivo es analizar si hay diferencias de salario entre directivos y técnicos. Para ello tendrás que seguir la siguiente secuencia en tu análisis
 
   - Filtra en tu dataset a aquellos casos donde la variable `catlab` sea igual a 1 (técnico) o 3 (directivo)
-  
-```{r}
-diretec <- subset(empleados2, catlab == 1 | catlab==3)
-```
-
   - Resta el salario medio de directivos menos el salario medio de técnicos
-
-```{r}
-dire <- subset(diretec, catlab==3) 
-tec <- subset(diretec, catlab==1) 
-
-mean(dire$salario) - mean(tec$salario)
-```
-
   - Crea un boxplot para cada uno para comprobar si siguen una distribución normal
-
-```{r}
-ggplot(diretec) +
-  geom_boxplot(aes(x=catlab, y= salario, colour = catlab))
-```
-
-
   - Calcula la T de student.
-  
-```{r}
-t.test(dire$salario, tec$salario)
-```
 
 **5. Comparaciones de una variable cualitativa con más de un grupo**. Vamos a extender nuestra comparativa de salarios a las tres categorias profesionales. Para ello, vamos a realizar un ANOVA.
 
   - Haz un boxplot comparando las tres categorías profesionales
-
-```{r}
-ggplot(empleados2) +
-  geom_boxplot(aes(x=catlab, y=salario, color=catlab))
-```
   - Análisis de varianza anova y visualización del mismo.
-
-Resultados:
-
-```{r}
-anova <- aov(empleados2$salario ~ empleados2$catlab)
-summary(anova)
-```
-
-Visualización
-
-```{r}
-plot(anova)
-```
-
-
-
-  
-  
-  
+ 

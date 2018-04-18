@@ -25,4 +25,9 @@ Con esta práctica vamos a empezar a crear visualizaciones en R y vamos a empezar
 
   - Haz un boxplot comparando las tres categorías profesionales
   - Análisis de varianza anova y visualización del mismo.
+  
+**6. Comparaciones de dos variables cualitativas**. Por último, añadiremos la variable sexo para analizar diferencias de salario por sexo y categoría profesional.
+
+  - El primer paso será crear una tabla de contingencia para analizar cuántos sujetos tenemos por categoría laboral y sexo. Para ello deberás emplear la función `as.table()`.
+  - El segundo paso será aplicar un test Chi-Cuadrado para comprar si hay diferencias significativas.
  
