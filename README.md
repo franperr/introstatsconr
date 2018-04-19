@@ -12,7 +12,7 @@ Materiales
 
   - [Introducción](https://docs.google.com/presentation/d/13u6yA9VCIehfZ75QitWccfBAXqeGsOnzAQ1xU3Vtn44/edit?usp=sharing) Contenido del curso y presentación
   - [Estadística](https://github.com/elrobin/introstatsconr/blob/master/Presentaciones/Estad%20en%20CCSS%20con%20R.pdf). Estadística descriptiva, inferencial y regresión lineal y múltiple
-  - [Programación con R](). Primeros pasos, instalaciones de paquetes y análisis estadístico
+  - [Programación con R](https://docs.google.com/presentation/d/1wJZ6Q0zgPlBBEaxFWXspmY1i6gY7fs942pUPveK3Z4g/edit?usp=sharing). Primeros pasos, instalaciones de paquetes y análisis estadístico
 
 2. **Datos**. Disponibles en la carpeta `data`.
 
