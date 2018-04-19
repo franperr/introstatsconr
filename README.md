@@ -3,7 +3,7 @@
 Curso impartido por:
 
 - [Nicolás Robinson-Garcia](http://nrobinsongarcia.com)
-- [Adrián Arias Díaz-Faes](http://www.ingenio.upv.es/es/Adrian-Arias-Diaz-Faes)
+- [Adrián Arias Díaz-Faes](https://sites.google.com/view/diazfaes)
 
 Materiales
 =========
@@ -11,16 +11,14 @@ Materiales
 1. **Presentaciones**
 
   - [Introducción](https://docs.google.com/presentation/d/13u6yA9VCIehfZ75QitWccfBAXqeGsOnzAQ1xU3Vtn44/edit?usp=sharing) Contenido del curso y presentación
-  - [Parte I](https://docs.google.com/presentation/d/18dTiFqfN3IFxs8XRWOahiJxz0yLPSXzOK_AGTkJm9po/edit?usp=sharing). Estadística descriptiva, medidas de centralidad y estadística inferencial
-  - [Parte II](https://docs.google.com/presentation/d/1OYLKJDDi1p7k1LHV5qBdDaeoFqeYXs0qMCSuj80wxUQ/edit?usp=sharing). Introducción a R y primeros pasos
-  - [Parte III](https://docs.google.com/presentation/d/1qQw-BL3H_2aZ5oBySqqNgn75sSGinZc_nh-Cu5kwgs8/edit?usp=sharing). Correlaciones, regresión lineal simple y regressión lineal múltiple.
-  - [Parte IV]()
+  - [Estadística](https://github.com/elrobin/introstatsconr/blob/master/Presentaciones/Estad%20en%20CCSS%20con%20R.pdf). Estadística descriptiva, inferencial y regresión lineal y múltiple
+  - [Programación con R](). Primeros pasos, instalaciones de paquetes y análisis estadístico
 
 2. **Datos**. Disponibles en la carpeta `data`.
 
-3. **Prácticas**
+3. **Prácticas**. Ejercicios disponibles en la carpeta *practicas*
 
-4. **Código**
+4. **Código**. Resolución de prácticas y demos disponibles en la carpeta *notas*.
 
 5. **Recursos**
 
