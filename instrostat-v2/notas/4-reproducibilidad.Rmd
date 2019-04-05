@@ -1,0 +1,23 @@
+---
+title: "notas-de-clase"
+author: "Nicolas Robinson-Garcia"
+date: "1 de abril de 2019"
+output:
+  pdf_document: default
+  html_document: default
+---
+
+## R es reproducible
+
+Se dice que R es reproducible ya que al ser necesario escribir en código todos y cada uno de los pasos que se siguen en el tratamiento de los datos desde el momento en que se importan, cualquier persona con el mismo set de datos y el mismo código debería obtener los mismos resultados. Todos tenemos el set de datos `mtcars` por defecto en `R`. Por tanto, si correlacionamos las cuatro primeras columnas del set de datos, todos deberíamos obtener los mismos resultados.
+
+```{r cars}
+cor(mtcars[,1:4])
+```
+
+Es más, si los resultados están mal o son diferentes, al compartir el código podemos identificar rápidamente dónde está el error:
+
+```{r}
+cor(mtcars[1:4,]) 
+# He seleccionado líneas en lugar de columnas
+```

@@ -1,0 +1,40 @@
+# ggplot2
+
+Lo primero que hay que hacer es instalar el paquete `ggplot2`.
+
+Importamos el set de datos de `empleados`.
+
+```{r}
+setwd("~/R/introstatsconr")
+library(haven)
+empleados <- read_sav("instrostat-v2/data/EMPLEADOS.sav")
+```
+
+Creamos un gráfico de dispersión.
+
+```{r}
+library(ggplot2)
+
+# La siguiente fórmula da error por el tipo de clase que es cada variable, hay que convertirlas a numéricas
+# ggplot(empleados) +
+#  geom_point(aes(x= expprev, y= salini)) 
+
+empleados2 <- empleados
+empleados2$expprev <- as.numeric(empleados2$expprev)  
+empleados2$salini <- as.numeric(empleados2$salini)
+
+ggplot(empleados2) +
+  geom_point(aes(x= expprev, y= salini)) 
+
+```
+
+Podemos seguir añadiendo capas y variables para mostrar más información en la gráfica
+
+```{r}
+empleados2$catlab <- as.factor(empleados2$catlab)
+empleados2$sexo <- as.factor(empleados2$sexo)
+
+ggplot(empleados2) +
+  geom_point(aes(x=expprev, y=salini, color=sexo, size=catlab))
+
+```
