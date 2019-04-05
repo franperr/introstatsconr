@@ -1,0 +1,41 @@
+Visualización de datos
+-----------------
+
+Importación de datos: 
+
+```{r}
+setwd("~/R/introstatsconr")
+library(haven)
+empleados <- read_sav("instrostat-v2/data/EMPLEADOS.sav")
+
+head(empleados)
+```
+
+Ahora vamos a hacer un gráfico de dispersión para analizar la relación entre la experiencia previa y el salario inicial para trabajadores de categoría 1.
+
+```{r}
+cat1 <- subset(empleados, catlab==1)
+plot(cat1$tiempemp, cat1$salario)
+```
+
+Los histogramas son representaciones gráficas muy útiles para analizar distribuciones. En este caso veremos cómo se distribuye el salario actual según el número de empleados:
+
+```{r}
+hist(empleados$salario)
+```
+
+Otra forma de representar distribuciones es empleando gráficos de caja y bigotes.
+
+```{r}
+boxplot(id~catlab, data = empleados)
+```
+
+Finalmente, vamos a analizar el nivel educativo por categoría del empleado utilizando un gráfico de barras
+
+```{r}
+mean.educ <- aggregate(educ~catlab, data = empleados, mean)
+mean.educ <- mean.educ[,2]
+names(mean.educ) <- c("1", "2", "3")
+barplot(mean.educ, main="Educación media",
+        xlab = "Categoría profesional")
+```
