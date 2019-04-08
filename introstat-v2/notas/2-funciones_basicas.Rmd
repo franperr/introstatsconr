@@ -1,7 +1,7 @@
 ---
 output:
-  html_document: default
   pdf_document: default
+  html_document: default
 ---
 Funciones
 ---
@@ -10,7 +10,7 @@ Listado de funciones básicas y ejemplos
 
 **Unir objetos**
 
-```{r}    
+```    
 # En columnas: 
 cbind(objeto1, objeto2,...)
 

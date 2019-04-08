@@ -10,7 +10,7 @@ Utilizando las opciones de importación de RStudio, selecciono el tipo de fichero
 ```{r}
 setwd("~/R/introstatsconr")
 library(haven)
-empleados <- read_sav("instrostat-v2/data/EMPLEADOS.sav")
+empleados <- read_sav("introstat-v2/data/EMPLEADOS.sav")
 
 head(empleados)
 ```

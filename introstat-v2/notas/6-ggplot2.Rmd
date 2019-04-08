@@ -1,3 +1,8 @@
+---
+output:
+  pdf_document: default
+  html_document: default
+---
 # ggplot2
 
 Lo primero que hay que hacer es instalar el paquete `ggplot2`.
@@ -7,7 +12,7 @@ Importamos el set de datos de `empleados`.
 ```{r}
 setwd("~/R/introstatsconr")
 library(haven)
-empleados <- read_sav("instrostat-v2/data/EMPLEADOS.sav")
+empleados <- read_sav("introstat-v2/data/EMPLEADOS.sav")
 ```
 
 Creamos un gráfico de dispersión.
